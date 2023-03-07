@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="494.0" prefWidth="684.0" style="-fx-background-color: #fafbff;">
+         <children>
+            <ListView fx:id="lstView" layoutX="237.0" layoutY="66.0" prefHeight="414.0" prefWidth="425.0" />
+            <Button layoutX="52.0" layoutY="89.0" mnemonicParsing="false" onAction="#SceneChange" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: #5182f5;" text="Add Task" />
+            <Button layoutX="52.0" layoutY="135.0" mnemonicParsing="false" onAction="#ShowTask" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: #5182f5;" text="All Task" />
+            <Button layoutX="52.0" layoutY="397.0" mnemonicParsing="false" onAction="#TaskDetails" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: #5182f5;" text="Task Detail" />
+            <MenuBar fx:id="menu" layoutY="2.0" prefHeight="25.0" prefWidth="684.0" style="-fx-background-color: #c4d6ff;">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Exit" text="Exit" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <ImageView fitHeight="182.0" fitWidth="200.0" layoutX="14.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Main.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
